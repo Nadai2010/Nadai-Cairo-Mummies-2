@@ -74,6 +74,8 @@ tempvar tri_pyramid_slope_angles : felt* = new (51, 52, 48);
 }
 ```
 
+![Graph](lesson0-1.png)
+
 ### Referencias
 
 Para documentos oficiales sobre matrices:  https://www.cairo-lang.org/docs/reference/syntax.html 

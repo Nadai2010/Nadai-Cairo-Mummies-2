@@ -82,6 +82,9 @@ Program output:
 1
 ```
 
+![Graph](lesson2-1.png)
+
+
 ### Referencias
 
 Para documentos oficiales sobre implícitos e incorporados: https://www.cairo-lang.org/docs/how_cairo_works/builtins.html

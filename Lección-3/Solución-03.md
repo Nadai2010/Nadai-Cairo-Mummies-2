@@ -138,6 +138,7 @@ func verify_slopes(slopes_arr : felt*, slopes_len : felt) -> (is_valid : felt) {
     return(is_valid=0);
 }
 ```
+![Graph](lesson3-1.png)
 
 ### Referencias
 

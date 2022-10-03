@@ -42,6 +42,8 @@ func verify_slopes(slopes_arr: felt*, slopes_len: felt) -> (is_valid: felt) {
 }
 ```
 
+![Graph](lesson1-1.png)
+
 ### Referencias
 
 Para documentos oficiales sobre matrices: https://www.cairo-lang.org/docs/reference/syntax.html

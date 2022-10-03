@@ -36,20 +36,14 @@ func verify_slopes(slopes_arr : felt*, slopes_len : felt) -> (is_valid : felt) {
 }
 
 //do not modify code on this line or above
-func double_verify_slopes(
-    first_arr: felt*,
-    first_arr_len: felt,
-    second_arr: felt*,
-    second_arr_len: felt
-    ) -> (res: felt) {
-    alloc_locals;
-    let (local first_verify: felt) = 
-    verify_slopes(first_arr, first_arr_len);
-    let (local second_verify: felt) = 
-    verify_slopes(second_arr, second_arr_len);
-    
-if((first_verify * second_verify) == 1) {
-    return(res=1)
+
+func double_verify_slopes(first_arr : felt*, first_arr_len : felt, second_arr : felt*, second_arr_len : felt) -> (res : felt) {
+
+alloc_locals;
+    let (local first_verify : felt) = verify_slopes(first_arr, first_arr_len);
+    let (local second_verify : felt) = verify_slopes(second_arr, second_arr_len);
+    if (first_verify+second_verify == 2) {
+        return(res=1);
     }
-    return(res=0)
+    return (res=0);
 }

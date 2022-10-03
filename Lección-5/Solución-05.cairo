@@ -1,22 +1,3 @@
-## Lección Module Final
-
-Resolver el módulo sin ayuda
-
-### Descripción General
-
-Para completar este módulo, deberá escribir tres funciones:
-
-* `verify_slopes`, que tiene dos parámetros `slopes_arr` y `slopes_len` que devuelve un `felt is_valid` que es 1 si es verdadero o 0 si es falso. ¿Qué hace que una pirámide sea válida? Si una serie de pendientes de los lados de una pirámide están todas en el rango de [51, 52], entonces la pirámide es válida y está a la altura de los estándares arquitectónicos de las momias. (La gran pirámide de Giza tiene todos sus lados exactamente a 51,5 grados).
-
-* `double_verify_slopes`, que tiene cuatro parámetros `first_arr`,`first_arr_len`,`second_arr`, `second_arr_len` y devuelve un  `felt` `res`. Ejecutará el método `verify_slopes` una vez en la primera matriz y luego una vez en la segunda matriz, devolviendo 1 si ambas pirámides son válidas y 0 en caso contrario.
-
-* `is_silly_pyramid`, que tiene dos parámetros `slopes_arr` y `slopes_len` que devuelve dos `felts`, `is_negative_pyramid` y `is_never_ending_pyramid`, cada uno de los cuales es 1 si es verdadero o 0 si es falso. ¿Qué hace una pirámide negativa? Cada una de las pendientes de los lados de la pirámide debe estar en el rango [-89, -1], esto haría una pirámide que se cierra y queda al revés. ¿Qué hace una pirámide interminable? Cada una de las pendientes de los lados de la pirámide debe estar en el rango [90, 179], ya que esto haría que las paredes de la pirámide se extendieran hasta el cielo para siempre. 
-
-## Solución
-
-Su objetivo es hacer que el script se compile y se ejecute correctamente. ¡Buena suerte! Si comprende qué es una `local` variable, puede usarla en sus funciones, pero intente lograr esto solo usando `let` para construir su astucia en El Cairo
-
-```bash
 %builtins output range_check
 from starkware.cairo.common.math_cmp import is_le
 from starkware.cairo.common.serialize import serialize_word
@@ -71,7 +52,6 @@ func main{output_ptr : felt*, range_check_ptr}() {
     return();
 }
 
-//do not modify code on this line or above
 
 func verify_slopes(slopes_arr : felt*, slopes_len : felt) -> (is_valid : felt) {
     if (slopes_len == 0) {
@@ -93,6 +73,8 @@ func double_verify_slopes(first_arr : felt*, first_arr_len : felt, second_arr : 
     }
     return (res=0);
 }
+
+//do not modify code on this line or above
 
 func v_slopes{output_ptr : felt*, range_check_ptr}(slopes_arr : felt*, slopes_len : felt) -> (is_valid : felt) {
     if (slopes_len == 0) {
@@ -139,12 +121,3 @@ func is_silly_pyramid{output_ptr : felt*, range_check_ptr} (slopes_arr : felt*, 
     }
     return (0,0);
 }
-```
-
-##  Referencias
-
-Para documentos oficiales de El Cairo:  https://www.cairo-lang.org/docs/
-
-## FELICIDADES, Un pasito más en Cairo.
-
-![Graph](FinalModule.png)

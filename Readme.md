@@ -17,3 +17,5 @@ En el módulo dos, obtendremos una introducción a las complejidades de las matr
 ### NOTA:
 
 Puede omitir las lecciones paso a paso y resolver todo el módulo o ir paso a paso comenzando en la Lección 1. Nos vemos en el otro lado de su primer guión.
+
+![Graph](Completado.png)
